@@ -217,4 +217,9 @@ export const fastifyTRPCInjectorPlugin = fp(
 
     done()
   },
+  {
+    fastify: '5.x',
+    name: 'fastify-inject-trpc',
+    decorators: { fastify: ['injectTRPC', 'withTypedTRPCInjector'] },
+  },
 )
