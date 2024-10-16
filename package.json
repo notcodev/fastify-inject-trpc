@@ -1,0 +1,54 @@
+{
+  "name": "fastify-inject-trpc",
+  "version": "0.1.0",
+  "description": "",
+  "license": "MIT",
+  "author": {
+    "name": "notcodev",
+    "url": "https://github.com/notcodev"
+  },
+  "repository": {
+    "url": "https://github.com/notcodev/fastify-inject-trpc.git",
+    "type": "git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "homepage": "https://github.com/notcodev/telegram-login-ultimate",
+  "bugs": "https://github.com/notcodev/telegram-login-ultimate/issues",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "shx rm -rf dist && rollup -c --bundleConfigAsCjs",
+    "lint": "eslint . --ext ts --ext tsx --no-error-on-unmatched-pattern --fix",
+    "dev": "cd ./playground && vite"
+  },
+  "keywords": [
+    "fastify",
+    "trpc",
+    "inject-api"
+  ],
+  "peerDependencies": {
+    "@trpc/server": "^10.45.0",
+    "fastify": "^5.0.0"
+  },
+  "devDependencies": {
+    "@siberiacancode/builder": "^1.3.11",
+    "@trpc/server": "^10.45.2",
+    "@types/node": "^22.7.5",
+    "beachball": "^2.43.1",
+    "eslint": "^8.57.0",
+    "eslint-kit": "^10.27.0",
+    "fastify": "^5.0.0",
+    "prettier": "^3.2.5",
+    "shx": "^0.3.4",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "fastify-plugin": "5.0.0"
+  }
+}
