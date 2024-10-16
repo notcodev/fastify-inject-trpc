@@ -1,7 +1,7 @@
 {
   "name": "fastify-inject-trpc",
   "version": "0.1.0",
-  "description": "",
+  "description": "Plugin for Fastify that allows to use the Fastify inject API with the full power of tRPC types",
   "license": "MIT",
   "author": {
     "name": "notcodev",
