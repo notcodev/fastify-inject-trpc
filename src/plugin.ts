@@ -185,13 +185,19 @@ export const fastifyTRPCInjectorPlugin = fp(
           }
 
           if (callback) {
-            return fastify.inject(options, (error, response) => {
-              const modifiedResponse = response
-                ? modifyResponse(response)
-                : undefined
+            return fastify.inject(
+              options,
+              (
+                error: Error | undefined,
+                response: LightMyRequestResponse | undefined,
+              ) => {
+                const modifiedResponse = response
+                  ? modifyResponse(response)
+                  : undefined
 
-              callback(error, modifiedResponse)
-            })
+                callback(error, modifiedResponse)
+              },
+            )
           }
 
           return fastify.inject(options).then(modifyResponse)
