@@ -24,8 +24,10 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "shx rm -rf dist && rollup -c --bundleConfigAsCjs",
-    "lint": "eslint . --ext ts --ext tsx --no-error-on-unmatched-pattern --fix",
-    "dev": "cd ./playground && vite"
+    "lint": "eslint . --ext ts --no-error-on-unmatched-pattern --fix",
+    "change": "beachball change --no-commit",
+    "release": "beachball publish --yes",
+    "prepare": "husky"
   },
   "keywords": [
     "fastify",
@@ -52,11 +54,20 @@
     "eslint": "^8.57.0",
     "eslint-kit": "^10.27.0",
     "fastify": "^5.0.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.2.5",
     "shx": "^0.3.4",
     "typescript": "^5.6.2"
   },
   "dependencies": {
     "fastify-plugin": "5.0.0"
+  },
+  "lint-staged": {
+    "*.js": "prettier --write",
+    "*.ts": [
+      "prettier --write",
+      "eslint --no-error-on-unmatched-pattern --fix"
+    ]
   }
 }
