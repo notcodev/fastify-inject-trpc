@@ -17,8 +17,13 @@ pnpm add fastify-inject-trpc
 ## Features
 
 - Allows to inject tRPC procedures calls with fastify inject API
-- Fully type safe
-- Simple API
+- Fully type safe procedures calls
+- Very similar API to Fastify's inject
+
+## Limitations
+
+- Subscriptions are not supported at this time
+- Custom serializers are not supported at this time
 
 ## Usage
 
