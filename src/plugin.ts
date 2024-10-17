@@ -116,7 +116,7 @@ export interface FastifyTRPCInjectorPluginOptions {
   prefix: `/${string}`
 }
 
-export const fastifyTRPCInjectorPlugin = fp(
+export const fastifyInjectTRPCPlugin = fp(
   (fastify, { prefix, router }: FastifyTRPCInjectorPluginOptions, done) => {
     const def = router._def
 
